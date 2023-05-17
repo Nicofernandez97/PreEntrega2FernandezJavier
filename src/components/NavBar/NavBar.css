@@ -1,0 +1,39 @@
+.container-navBar {
+    background-color: pink;
+    display: flex;
+}
+
+.container-navBar li {
+    display: flex;
+    list-style-type: none;
+    margin: 3px;
+    padding: 5px;
+}
+
+.container-navBar div {
+    width: 100%;
+}
+
+.container-navBar h1 {
+    margin-left: 20px;
+}
+
+.container-navBar ul {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.container-navBar a {
+    text-decoration: none;
+    color: black;
+    justify-content: center;
+}
+
+.cart-icon {
+    justify-content: flex-end;
+}

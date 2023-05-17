@@ -1,0 +1,6 @@
+.mensaje {
+    display: flex;
+    justify-content: center;
+    font-size: xx-large;
+    background-color: pink;
+}

@@ -1,35 +1,19 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import "./App.css"
 
-function App() {
-  const [count, setCount] = useState(0)
+// Importación de componente.
+import NavBar from "./components/NavBar/NavBar";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 
-  return (
-    <>
+class App extends React.Component{
+  render() {
+    return(
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <NavBar nombre="Max-Baires" sector1="Inicio" sector2="Paquetes Internacionales" sector3="Paquetes Nacionales" sector4="Traslados" sector5="Alojamiento" sector6="Contactanos" sector7="Sector Compras" />
+        <ItemListContainer greeting={"Bienvenido a Max-Baires!"} /> 
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    )
+  }
 
+}
 export default App
