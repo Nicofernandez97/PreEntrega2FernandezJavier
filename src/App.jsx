@@ -31,7 +31,6 @@ class App extends React.Component{
         <Route path="/categorias/productostecnologia" element={<TecnologiaPage/>}> </Route>
         <Route path="/item/:id" element={<DetailPage />}> </Route>
         <Route path="/cart" element={<CartWidgetPage />}> </Route>
-
         </Routes>
         <Footer></Footer>
       </div>
