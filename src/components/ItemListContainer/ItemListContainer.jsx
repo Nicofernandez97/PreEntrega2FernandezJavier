@@ -23,19 +23,20 @@ useEffect(() => {
 
 
 
-
   return (
     <div>  
-      <h1>Listado de productos:</h1>
+      <h1 className='encabezado-ItemList'>Listado de productos:</h1>
+      <div className='ItemList'>
       {productos.map((producto) =>{
         return(
-          <div key={producto.id}> 
+          <div key={producto.id} className='card-dom'> 
           <Link to={`/item/${producto.id}`}>
             <CardItem data={producto}/> 
             </Link>
            </div>
         )
       })}
+      </div>
     </div>
   )
 }

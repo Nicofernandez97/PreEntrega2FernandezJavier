@@ -1,6 +1,30 @@
-.mensaje {
+.ItemList {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: rgb(243, 225, 228);
+    align-items: center;
+
+}
+
+.card-dom {
+    height: 750px;
+    margin-left: 25px;
+    padding: 5px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.encabezado-ItemList {
+    display: grid;
+    background-color: white;
+    justify-content: center;
+}
+
+.card-dom a {
+    text-decoration: none;
+}
+
+.card-dom button {
     display: flex;
     justify-content: center;
-    font-size: xx-large;
-    background-color: pink;
 }

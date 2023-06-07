@@ -10,7 +10,7 @@ const CardItem = ({data}) => {
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia
-        sx={{ height: 140 }}
+        sx={{ height: 250}}
         image={data.image}
         title={data.title}
       />

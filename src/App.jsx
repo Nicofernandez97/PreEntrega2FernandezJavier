@@ -9,8 +9,12 @@ import Footer from "./components/Footer/Footer";
 //Importación pages
 import InicioPage from "./pages/InicioPage/InicioPage";
 import ProductosPage from "./pages/ProductosPage/ProductosPage"; 
-import ContactanosPage from "./pages/ContactanosPage/ContactanosPage";
 import DetailPage from "./pages/ItemIdPage/ItemIdPage";
+import CategoriesPage from "./pages/CategoriesPage/CategoriesPage";
+import ProductosHombrePage from "./pages/CategoriesPage/ProductosHombrePage";
+import ProductosMujerPage from "./pages/CategoriesPage/ProductosMujerPage";
+import TecnologiaPage from "./pages/CategoriesPage/TecnologiaPage";
+import CartWidgetPage from "./pages/CartWidgetPage/CartWidgetPage";
 
 class App extends React.Component{
   render() {
@@ -20,9 +24,13 @@ class App extends React.Component{
         <NavBar nombre="Max-Baires"/>
         <Routes>
         <Route path="/" element={<InicioPage />}> </Route>
-        <Route path="/productos" element={<ProductosPage />}> </Route>
-        <Route path="/contactanos" element={<ContactanosPage />}> </Route>
+        <Route path="/productos" element={<ProductosPage/>}> </Route>
+        <Route path="/categorias" element={<CategoriesPage/>}> </Route>
+        <Route path="/categorias/productoshombre" element={<ProductosHombrePage/>}> </Route>
+        <Route path="/categorias/productosmujer" element={<ProductosMujerPage/>}> </Route>
+        <Route path="/categorias/productostecnologia" element={<TecnologiaPage/>}> </Route>
         <Route path="/item/:id" element={<DetailPage />}> </Route>
+        <Route path="/cart" element={<CartWidgetPage />}> </Route>
 
         </Routes>
         <Footer></Footer>

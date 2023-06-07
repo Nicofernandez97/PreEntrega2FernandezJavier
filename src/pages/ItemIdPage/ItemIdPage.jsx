@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { Axios } from 'axios';
 import CardItem from '../../components/CardItem/CardItem';
-
+import "./ItemIdPage.css"
 
 const ItemIdPage = () => {
     let {id} = useParams();
@@ -23,7 +23,7 @@ const ItemIdPage = () => {
       }, [id]);
     
    return (
-    <div><h2>
+    <div className='Detalle'><h2>
     Detalle de tu producto:    
     </h2>
     {<CardItem  data={prod} />} 
