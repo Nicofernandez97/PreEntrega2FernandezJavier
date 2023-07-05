@@ -1,41 +1,42 @@
 import React, { useEffect, useState } from 'react'
 import "./ItemListContainer.css"
 import CardItem from '../CardItem/CardItem';
-import { Link } from 'react-router-dom';
+import { collection, query, where, getDocs } from "firebase/firestore";
+import { db } from '../../Firebase/FirebaseConfig';
+import Spinner from '../Spinner/Spinner';
+
+
 const ItemListContainer = () => {
 
-const [productos,setProductos] = useState([]); 
-
-
-useEffect(() => { 
-    async function encontrarJson(){
-      try{
-    const encontrarPaquetes = await fetch('https://fakestoreapi.com/products');
-    const data = await encontrarPaquetes.json();
-    setProductos(data);
-    }
-  catch (error){
-    console.log(error)
+const [paquetes, setPaquetes] = useState([]);
+  
+  useEffect ( () => {
+    const mostrarItems = async () => {
+    const q= query(collection(db, "items"));
+    const querySnapshot = await getDocs(q)
+    const items = []
+    querySnapshot.forEach((doc) => {
+      items.push({...doc.data(), id: doc.id});
+    });
+    setPaquetes(items) 
   }
-  }
-  encontrarJson()
-  }, []);
+  mostrarItems();
+  },[]);
 
 
 
   return (
     <div>  
-      <h1 className='encabezado-ItemList'>Listado de productos:</h1>
+      <h1 className='encabezado-ItemList'>Descubri lo que Argentina tiene para ofrecerte con nosotros:</h1>
       <div className='ItemList'>
-      {productos.map((producto) =>{
+  
+      { paquetes.length >0 ? paquetes.map((paquete) =>{
         return(
-          <div key={producto.id} className='card-dom'> 
-          <Link to={`/item/${producto.id}`}>
-            <CardItem data={producto}/> 
-            </Link>
-           </div>
+          <div key={paquete.id} className='card-dom'> 
+            <CardItem paquete={paquete}/>           
+          </div>
         )
-      })}
+      }): <Spinner />}
       </div>
     </div>
   )

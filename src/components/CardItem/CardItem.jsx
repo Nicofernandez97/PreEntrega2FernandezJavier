@@ -5,29 +5,41 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { Link } from 'react-router-dom';
+import "./CardItem.css"
+import Box from '@mui/material/Box';
 
-const CardItem = ({data}) => {
+
+
+
+
+const CardItem = ({paquete}) => {
+
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    
+    <Link to={`/item/${paquete.id}`}>
+    <Card sx={{ maxWidth: 430 }}>
       <CardMedia
-        sx={{ height: 250}}
-        image={data.image}
-        title={data.title}
+        sx={{ height: 300}}
+        image={paquete.imageLink}
+        title={paquete.name}
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          {data.title}
+          {paquete.name}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
-        {data.description}
-       <br />
-       Precio: <strong> {data.price} USD </strong>     
+        <Typography variant="body2" color="text.secondary" sx={{ fontSize : 20}}>
+       Precio: <strong> {paquete.price} USD por persona </strong>     
         </Typography>
+        
       </CardContent>
       <CardActions>
-        <Button size="small">Mas Información</Button>
+      <Box component="span" className='buttonSiteCard' sx={{ }}>
+      <Button size="small"><span>Mas Información</span></Button>  
+      </Box>
       </CardActions>
     </Card>
+    </Link>
   );
 }
 export default CardItem 

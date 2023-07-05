@@ -1,17 +1,18 @@
 .ItemList {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     background-color: rgb(243, 225, 228);
     align-items: center;
 
 }
 
+
+
 .card-dom {
-    height: 750px;
+    height: 480px;
     margin-left: 25px;
     padding: 5px;
     margin-top: 10px;
-    width: 100%;
 }
 
 .encabezado-ItemList {
@@ -22,6 +23,7 @@
 
 .card-dom a {
     text-decoration: none;
+    width: fit-content;
 }
 
 .card-dom button {

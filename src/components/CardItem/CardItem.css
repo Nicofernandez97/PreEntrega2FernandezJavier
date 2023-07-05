@@ -1,0 +1,25 @@
+a {
+    display: flex;
+}
+
+a div {
+    width: 450px;
+}
+
+.agregar-carrito {
+    display: flex;
+    justify-content: center;
+    margin-left: 30px;
+}
+
+.buttonSiteCard {
+    display: flex;
+    margin-left: 115px;
+}
+
+.buttonSiteCard span {
+    padding: none;
+    margin: none;
+    font-family: sans-serif;
+    font-size: 15px;
+}

@@ -20,17 +20,25 @@ const Footer = () => {
           <h4 >Contactanos</h4>
           <ul >
             <li>
+              <div>
             <p >
-               <CallIcon />     
+               <CallIcon className='Icon'/>     
               Servicio venta: 0800-...</p>
+              </div>
             </li>
             <li >
+            <div>
+
             <p >
-               <CallIcon />            
+               <CallIcon className='Icon'/>            
               Servicio posventa: 0800-...</p>
+              </div>
             </li>
-            <li><p >
-               <EmailIcon /> Email: max-baires@...</p>
+            <li>
+              <div>
+              <p >
+               <EmailIcon className='Icon'/> Email: max-baires@...</p>
+               </div>
             </li>
           </ul>
         </div>

@@ -2,4 +2,14 @@
     display: grid;
     justify-content: center;
     align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+a div {
+    width: 600px;
+}
+
+.item-description {
+    width: 580px;
 }

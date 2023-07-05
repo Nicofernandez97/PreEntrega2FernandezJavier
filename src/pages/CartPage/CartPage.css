@@ -1,0 +1,65 @@
+.Detalle {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 25px;
+
+}
+
+a div {
+    width: 600px;
+}
+
+.item-description {
+    width: 580px;
+}
+
+.subtotal {
+    display: flex;
+    padding: 20px;
+}
+
+.cartlist {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    padding: 30px;
+
+}
+
+.cart-container {
+    margin-left: 25px;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+.form-wrapper {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    display: grid;
+    justify-content: center;
+    margin-left: 25px;
+}
+
+.form-container {
+    width: 550px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.form-input {
+    padding: 35;
+}
+
+.send-form {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonSite {
+    display: flex;
+    margin-left: 230px;
+}

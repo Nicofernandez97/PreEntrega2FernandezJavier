@@ -1,0 +1,14 @@
+a {
+    text-decoration: none;
+    display: grid;
+    align-self: center;
+    justify-content: center;
+}
+
+.error-link {
+    height: 60px;
+    text-decoration: none;
+    display: inline-block;
+    justify-content: center;
+
+}
