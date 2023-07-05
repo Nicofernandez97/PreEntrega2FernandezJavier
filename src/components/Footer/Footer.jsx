@@ -23,7 +23,7 @@ const Footer = () => {
               <div>
             <p >
                <CallIcon className='Icon'/>     
-              Servicio venta: 0800-...</p>
+              <span className='alinear-footer'>Servicio venta: 0800-...</span></p>
               </div>
             </li>
             <li >
@@ -31,13 +31,13 @@ const Footer = () => {
 
             <p >
                <CallIcon className='Icon'/>            
-              Servicio posventa: 0800-...</p>
+             <span className='alinear-footer'> Servicio posventa: 0800-...</span></p>
               </div>
             </li>
             <li>
               <div>
               <p >
-               <EmailIcon className='Icon'/> Email: max-baires@...</p>
+               <EmailIcon className='Icon'/><span className='alinear-footer'> Email: max-baires@... </span></p>
                </div>
             </li>
           </ul>
